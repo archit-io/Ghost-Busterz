@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    animation-name: blinkBody;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    user-select: none;
+}
+
+img {
+    width: 5vw;
+    height: 5vw;
+    display: none;
+}
+
+img.busted {
+    width: 7vw;
+    height: 7vw;
+    display: none;
+}
+
+.img1 {
+    animation-name: bounceImg1;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+
+.img2 {
+    animation-name: bounceImg1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: reverse;
+}
+
+.img3 {
+    animation-name: bounceImg2;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+
+.img4 {
+    animation-name: bounceImg2;
+    animation-duration: 6.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: reverse;
+}
+
+.img5 {
+    animation-name: bounceImg3;
+    animation-duration: 8.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+
+.img6 {
+    animation-name: bounceImg3;
+    animation-duration: 6.75s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: reverse;
+}
+
+.img7 {
+    animation-name: bounceImg4;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+
+.img8 {
+    animation-name: bounceImg4;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: reverse;
+}
+
+.img9 {
+    animation-name: bounceImg3;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+
+.img10 {
+    animation-name: bounceImg2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: reverse;
+}
+
+.play, .score, .timer, .gameOver, .music {
+    border: 2px dotted yellow;
+    border-radius: 5px;
+    color: yellow;
+    font-size: 50px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.play:hover {
+    cursor: pointer;
+    transition-duration: 1sec ;
+    transition-timing-function: ease-in-out ;
+    font-size: 60px;
+}
+
+.score, .timer, .music {
+    font-size: 30px;
+    display: none;
+}
+
+.gameOver {
+    display: none
+}
+
+.music {    
+    display: none;
+    margin-left: 60%;
+}
+
+.music:hover {
+    cursor: pointer;
+}
+
+@keyframes blinkBody {
+    0% {
+        background-color: aqua;
+    }
+    20% {
+        background-color: blueviolet;
+    }
+    40% {
+        background-color: orange;
+    }
+    60% {
+        background-color: salmon;
+    }
+    80% {
+        background-color: pink;
+    }
+    100% {
+        background-color: gold;
+    }
+}
+
+
+@keyframes bounceImg1 {
+    0% {
+        transform:translate(0);               
+      }
+    25% {
+          transform:translate(45vw, 75vh); 
+      }
+    50% {
+        transform: translate(85vw, 45vh);
+    }
+    75% {
+        transform: translate(45vw, 0vh);
+    }
+    100% {
+        transform: translate(0vw, 75vh);
+    }
+  }
+
+  @keyframes bounceImg2 {
+    0% {    
+        transform: translate(45vw, 0vh);           
+      }
+    25% {
+          transform:translate(45vw, 75vh); 
+      }
+    50% {
+        transform: translate(85vw, 45vh);
+    }
+    75% {
+        transform: translate(0vw, 75vh);
+    }
+    100% {
+        transform:translate(0);        
+    }
+  }
+
+  @keyframes bounceImg3 {
+    0% {            
+        transform:translate(-50vw, 75vh);         
+      }
+    25% {           
+          transform: translate(25vw, 45vh);
+      }
+    50% {
+        transform: translate(25vw, 0vh);
+    }
+    75% {
+        transform:translate(0);        
+    }
+    100% {            
+        transform:translate(-50vw, 75vh);         
+      }
+  }
+
+
+  @keyframes bounceImg4 {
+    0% {            
+        transform:translate(-45vw, 75vh);         
+      }
+    25% {            
+          transform: translate(-45vw, 0vh);
+      }
+    50% {
+        transform: translate(20vw, 45vh);
+    }
+    75% {
+        transform:translate(0);        
+    }
+    100% {            
+        transform:translate(-45vw, 75vh);         
+      }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    img {
+        width: 10vw;
+        height: 10vw;
+        display: none;
+    }
+    
+    img.busted {
+        width: 12vw;
+        height: 12vw;
+        display: none;
+    }
+  }
